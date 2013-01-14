@@ -1,0 +1,17 @@
+AuthUserFile /Users/software/SiteAccess/.passwords
+AuthGroupFile /Users/software/SiteAccess/.htgroups
+AuthName "CS105 Homework - astudent"
+AuthType Basic
+require valid-user
+
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+<Files *.htm*>
+require user astudent
+require group professors assistants
+</Files>
+
+
